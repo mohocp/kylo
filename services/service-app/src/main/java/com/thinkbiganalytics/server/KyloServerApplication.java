@@ -60,7 +60,7 @@ public class KyloServerApplication implements SchedulingConfigurer {
         SLF4JBridgeHandler.install();
         KyloUpgrader upgrader = new KyloUpgrader();
 
-        if (upgrader.isUpgradeRequired()) {
+        if (false && upgrader.isUpgradeRequired()) {
             KyloVersion currentVersion = upgrader.getCurrentVersion();
             log.info("*****  Upgrade required - this may take some time  *****");
             log.info("Beginning upgrade from version {} ...", currentVersion == null ? "unknown" : currentVersion);
